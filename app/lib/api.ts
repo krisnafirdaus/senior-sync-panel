@@ -2,8 +2,11 @@ import { SyncApiResponse } from "@/app/types";
 
 const SYNC_ENDPOINT = "https://portier-takehometest.onrender.com/api/v1/data/sync";
 
-export async function fetchSyncData(): Promise<SyncApiResponse> {
-  const res = await fetch(SYNC_ENDPOINT, {
+export async function fetchSyncData(applicationId: string): Promise<SyncApiResponse> {
+  const url = new URL(SYNC_ENDPOINT);
+  url.searchParams.set("application_id", applicationId);
+
+  const res = await fetch(url.toString(), {
     method: "GET",
     headers: {
       Accept: "application/json",

@@ -119,7 +119,7 @@ export function useSyncFlow(
     onIntegrationUpdate({ ...integration, status: "syncing" });
 
     try {
-      const data = await fetchSyncData();
+      const data = await fetchSyncData(integration.id);
       const changes = data.data.sync_approval.changes;
 
       let allChanges = [...changes];

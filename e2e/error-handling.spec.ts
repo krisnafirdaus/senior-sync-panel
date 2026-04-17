@@ -7,7 +7,7 @@ test.describe("Error handling", () => {
   });
 
   test("displays 500 error message", async ({ page }) => {
-    await page.route("https://portier-takehometest.onrender.com/api/v1/data/sync", (route) => {
+    await page.route("https://portier-takehometest.onrender.com/api/v1/data/sync**", (route) => {
       route.fulfill({
         status: 500,
         contentType: "application/json",
@@ -23,7 +23,7 @@ test.describe("Error handling", () => {
   });
 
   test("displays 502 error message", async ({ page }) => {
-    await page.route("https://portier-takehometest.onrender.com/api/v1/data/sync", (route) => {
+    await page.route("https://portier-takehometest.onrender.com/api/v1/data/sync**", (route) => {
       route.fulfill({
         status: 502,
         contentType: "application/json",
@@ -39,7 +39,7 @@ test.describe("Error handling", () => {
   });
 
   test("displays 4xx error message", async ({ page }) => {
-    await page.route("https://portier-takehometest.onrender.com/api/v1/data/sync", (route) => {
+    await page.route("https://portier-takehometest.onrender.com/api/v1/data/sync**", (route) => {
       route.fulfill({
         status: 400,
         contentType: "application/json",

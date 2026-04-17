@@ -47,7 +47,7 @@ test.describe("Integration detail - Sync Now", () => {
   });
 
   test("happy path: sync preview then apply clean changes", async ({ page }) => {
-    await page.route("https://portier-takehometest.onrender.com/api/v1/data/sync", (route) => {
+    await page.route("https://portier-takehometest.onrender.com/api/v1/data/sync**", (route) => {
       route.fulfill({
         status: 200,
         contentType: "application/json",
@@ -74,7 +74,7 @@ test.describe("Integration detail - Sync Now", () => {
   });
 
   test("conflict path: shows conflict resolver and allows resolution", async ({ page }) => {
-    await page.route("https://portier-takehometest.onrender.com/api/v1/data/sync", (route) => {
+    await page.route("https://portier-takehometest.onrender.com/api/v1/data/sync**", (route) => {
       route.fulfill({
         status: 200,
         contentType: "application/json",
