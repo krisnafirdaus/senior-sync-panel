@@ -68,8 +68,8 @@ export function generateHistory(integrationId: string, count: number): SyncEvent
   return events;
 }
 
-const HISTORY_KEY = "portier_sync_history_v2";
-const INTEGRATIONS_KEY = "portier_integrations_v2";
+const HISTORY_KEY = "portier_sync_history_v3";
+const INTEGRATIONS_KEY = "portier_integrations_v3";
 
 export function getStoredIntegrations(): Integration[] {
   if (typeof window === "undefined") return integrations;
