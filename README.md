@@ -2,6 +2,8 @@
 
 A frontend take-home project for Portier: a Web App Integration Sync Panel that demonstrates integration management, sync preview, conflict resolution, and version history tracking.
 
+**Live Demo**: https://senior-sync-panel.vercel.app/integrations/stripe/
+
 ## What it does
 
 - **Integrations List**: View all connected services with status badges (synced, syncing, conflict, error), search, and status filters.
